@@ -1,17 +1,17 @@
 /*
- Problem: 5 marks oda total and average kandupidi
- Approach: array la irukkura ellaa marks um loop la serthu, length ah vechu divide pannanum
+ Problem: Find the total and average of 5 marks
+ Approach: Add all the marks in the array using a loop, then divide the total by the array length
 */
 public class Hello {
     public static void main(String[] args) {
         int[] marks = {70, 85, 90, 65, 80};
-        int sum = 0; // total ah store panna
+        int sum = 0; // stores the running total
 
         for (int i = 0; i < marks.length; i++) {
-            sum = sum + marks[i]; // ovvoru mark ayum sum la serkkum
+            sum = sum + marks[i]; // add each mark to the total
         }
 
-        // (double) podalana integer division aagi decimal pogum
+        // cast to double, otherwise integer division drops the decimal part
         double avg = (double) sum / marks.length;
 
         System.out.println("Total = " + sum);
